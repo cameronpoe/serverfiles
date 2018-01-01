@@ -1,3 +1,7 @@
+## Tools ##
+apt-get install fail2ban ufw -y
+ufw status
+
 ### 1: Drop invalid packets ###
 /sbin/iptables -t mangle -A PREROUTING -m conntrack --ctstate INVALID -j DROP
 
