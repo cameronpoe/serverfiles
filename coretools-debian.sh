@@ -3,7 +3,10 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-apt-get install curl golang nodejs vim zsh -y
+apt install curl golang nodejs vim build-essential net-tools python python3 python-pip python3-pip -y
+
+pip -V
+pip3 -V
 
 echo "Installing oh my zsh"
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
